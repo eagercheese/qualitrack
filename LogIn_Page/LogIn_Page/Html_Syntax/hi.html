@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--    <--------------------------optional lang to pero nilagay kona para yung ginamit nyong browser gagamitin nya yung best or latest rendering engine--> 
+    <title>Login Page</title>
+    <link rel="stylesheet" href="Login.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body, html {
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .background-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100vw;
+            background-image: url(C:\Users\baluy\Downloads\461537419_511225271691889_3777863332234807031_n.jpg);
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-position: center;
+        }
+        
+        /*OVERLAY*/
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            backdrop-filter: blur(5px);
+            z-index: 1;
+            background: linear-gradient(to top, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.3) 50%, transparent 100%);/*        <------------- pwedi mo iedit dito yung pagkatransparency ng faded white*/
+        }
+        
+        /*LOGIN CONTAINER*/
+        .loginForm-container {
+            position: relative;
+            z-index: 2;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+            width: 90vw;
+            max-width: 400px;
+            padding: 20px;
+        }
+        
+        /* LOGO*/
+        .logo {
+            width: 60%;
+            max-width: 150px;
+            height: auto;
+            margin: 0 auto 20px;
+            display: block;
+        }
+        
+        .DhvsuText {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin: -20px auto 5px;
+            display: block;
+        }
+        
+        /* INPUT CONTAINER*/
+        .input-container {
+            margin-bottom: 15px;
+        }
+        
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #750000;
+            outline: none;
+        }
+        
+        /*PASS CONTAINER PATI YUNG MATA*/
+        .pass-container {
+            position: relative;
+        }
+        
+        .eye-btn {
+            position: absolute;
+            right: 26px;
+            top: 58%;
+            transform: translateY(-50%);
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            width: 5%;
+        }
+        
+        .eye-icon {
+            width: 18px;
+            height: 18px;
+        }
+        
+        /*REMEMBER ME*/
+        .rememberMe-container {
+            font-size: 0.8rem;
+            display: flex;
+            
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        /* BUTTONS*/
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            cursor:pointer;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        
+        .login-btn {
+            background-color: #FFC000;
+            color: #750000;
+        }
+        
+        .signup-btn {
+            background-color: #F0EFE7;
+            color: #750000;
+        }
+        
+        button:hover {
+            opacity: 0.9;
+        }
+        
+        /* FORGOT PASS + ACC NOT ACTIVATED*/
+        .link-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        
+        .forgot-password,
+        .account-not-activated {
+            display: block;
+            font-size: 0.8rem;
+            color: #750000;
+        }
+        
+        .forgot-password:hover,
+        .account-not-activated:hover {
+            text-decoration: underline;
+        }
+        
+        /* OUTLINE NG CONTAINER INPUT */
+        input:hover {
+            outline: none;
+            border: 1px solid #FFC000;
+        }
+        input:focus {
+            outline: none;
+            border: 1px solid #FFC000;
+        }
+        
+        /* SMOL LAPTOPS - TABLETS */
+        @media (max-width: 1024px) {
+            .loginForm-container {
+                width: 80vw;
+                max-width: 350px;
+            }
+        }
+        
+        /* MEDIUM LAPTOPS */
+        @media (max-width: 768px) {
+            .loginForm-container {
+                width: 75vw;
+                max-width: 320px;
+            }
+        }
+        
+        /* CELLPHONES */
+        @media (max-width: 480px) {
+            .loginForm-container {
+                width: 90vw;
+                max-width: 280px;
+            }
+        
+            .eye-btn {
+                right: 30px ;
+                top: 57%;
+            }
+        
+            .rememberMe-container,
+            .forgot-password,
+            .account-not-activated {
+                font-size: 0.7rem; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-container">
+        <div class="overlay"></div>
+        <div class="loginForm-container">
+            <form class="login-form" action="login.php" method="POST">
+                <img src="C:\Users\baluy\Downloads\461275391_892126266181957_2441190900041324875_n.png" alt="Logo" class="logo"> 
+                <img src="C:\Users\baluy\Downloads\461488147_1086292903036034_6821364370747028639_n.png" alt="Text" class="DhvsuText">
+                <div class="input-container">
+                    <input type="text" name="username" placeholder="Username" required>
+                </div>
+                <div class="input-container passw-container">
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                    <button type="button" id="togglePassword" class="eye-btn">
+                        <img src="C:\Users\baluy\Downloads\393879198_730880888397896_8970349558226190009_n.png" alt="Toggle Password" class="eye-icon" id="eyeIcon">
+                    </button>
+                </div>
+                <div class="input-container rememberMe-containerr">
+                    <input type="checkbox" id="rememberMe" name="rememberMe">
+                    <label for="rememberMe"> Remember Me</label>
+                </div>
+                <button type="submit" class="btn login-btn">Login</button>
+                <button type="button" class="btn signup-btn">Sign Up</button>
+                <div class="link-container">
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                    <a href="#" class="account-not-activated">Account not activated?</a>
+                </div>
+            </form>            
+        </div>
+    </div> 
+    
+</body>
+</html>

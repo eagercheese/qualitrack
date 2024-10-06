@@ -1,0 +1,52 @@
+CREATE DATABASE websys_qualitrack;
+
+CREATE TABLE student_information(
+	studentID INT NOT NULL PRIMARY KEY,
+    studentNAME VARCHAR(50) NOT NULL,
+    studentAGE INT,
+    studentGENDER VARCHAR(10),
+    studentCONTACT VARCHAR(15),
+    studentDOB VARCHAR(10),
+    studentPEMAIL VARCHAR(50),
+    studentDEMAIL VARCHAR(50),
+	studentADDRESS VARCHAR(50)
+);
+
+INSERT INTO student_information VALUES(
+    2022307645, 
+    "Aldwin Luis Sanchez",
+	21,
+    "male",
+	"09987312290",
+    "04/06/2024",
+    "sanchez.aldwin06@gmail.com",
+    "2022307645@dhvsu.edu.ph",
+    "511, 5th Ave Uni. Subd., Brgy. Del Pilar, CSFP"
+),
+(
+     2022315221, 
+    "Larenz Carl A Abad",
+	23,
+    "male",
+	"09761514842",
+    "05/22/2001",
+    "carllarenzabad22@gmail.com",
+    "2022315221@dhvsu.edu.ph",
+    "arayat pampanga"
+
+),
+(
+     2022314547, 
+    "Luis Mardie S Diala",
+	20,
+    "male",
+	"09923181388",
+    "09/14/2004",
+    "salaliladialaluismardie@gmail.com",
+    "2022314547@dhvsu.edu.ph",
+    "Zone 1 Becuran, Sta. Rita, Pampanga"
+
+);
+
+
+

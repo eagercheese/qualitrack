@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    background-image: url("../Images/Bg.png"); 
+    background-size: cover;  
+    background-position: center;  
+    background-repeat: no-repeat;  
+    background-attachment: fixed;  
+
+    margin: 0;  
+    height: 100%;
+
+}
+#background_container {
+    position: absolute; 
+    min-height: 100vh;
+    min-width: 100vw;
+    
+
+}
+#background_overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, .3) 40%, transparent 100%);
+    backdrop-filter: blur(5px);
+    z-index: 0; 
+
+}
+
+#form_container {
+    margin-top: 8rem;
+    position: fixed;
+    
+    left: 50%;
+    transform: translate( -50%);
+
+
+    z-index: 1; 
+    background-color: white; 
+    
+    border-radius: 10px;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.5);
+    width: 90vw;
+    max-width: 425px;
+
+    max-height: 575px;
+    padding: 20px; 
+
+    
+}
+
+#Dhvsu_logo{
+    width: 7.5rem ;
+    height: 7.5rem;
+
+    margin: 0 auto 10px; 
+    display: block;
+}
+
+#Dhvsu_text{
+    color: #8B0505;
+    font-family: 'Arial', sans-serif;
+    font-size: 23px;
+    font-weight: 800;
+
+
+    text-align: center;
+    line-height: 28px;
+    margin-top: 20px;
+    margin: 0 auto 10px;
+}
+
+#LogIn_text{
+    color: #8B0505;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+
+    margin: 10px auto 5px;
+}
+
+/*Credentials Container*/
+.credential_container{
+    margin-bottom: 10px;
+}
+input[type="text"],
+input[type="password"]{
+    font-size: 16px;
+    width: 100%;
+    padding: 12px;
+    padding-left: 30px;
+    border-radius: 5px;
+    border: 1.2px solid #750000;
+    outline: none;
+}
+
+input:hover{
+    outline: none;
+    border: 1.2px solid #FFC000;
+}
+input:focus {
+    outline: none;
+    border: 1.2px solid #FFC000;
+}
+
+/*LogIn and SignUp Buttons Syntax*/
+.LogIn_SignUp_Buttons{
+    width: 100%;
+    border-radius: 5px;
+
+    padding: 10px;
+    margin-top: 10px;
+
+    cursor:pointer;
+    border: none;
+    outline: none;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+#Login_Button{
+    margin-top: 25px;
+    background-color: #FFC000;
+    color: #750000;
+}
+
+#SignUp_Button{
+    background-color: #F0EFE7;
+    color: #750000;
+}
+
+.LogIn_SignUp_Buttons:hover{
+    border: none;
+    opacity: 0.8;
+}
+
+
+/*Forgot password and Activate Syntax*/
+.Link_text{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+
+#Forgot_Password,
+#Activate {
+    margin-top: 5px;
+    font-size: 0.8rem;
+    font-family: 'Arial', sans-serif;
+    font-weight: 600;
+
+    display: block;
+    color: #750000;
+}
+
+#Forgot_Password:hover,
+#Activate:hover{
+    
+    font-size: .9rem;
+}
+
+/*Media Query 1200 by 1200*/
+@media only screen and (min-width: 1200px), (min-height: 1200px) {
+    #form_container {
+        margin-top: 10rem;
+        width: 90vw;
+        max-width: 500px;
+    
+        max-height: 700px;
+    }
+    #Dhvsu_logo{
+        width: 8.5rem ;
+        height: 8.5rem;
+    
+        margin: 0 auto 20px; /*210*/
+    }  
+    #Dhvsu_text{
+        margin-top: 20px;
+        font-size: 1.95rem;
+        font-weight: 800;
+    
+        margin: 0 auto 20px; /*40*/
+    }
+    #LogIn_text{
+        font-size: 1.25rem; 
+    
+        margin: 10px /*30*/auto 5px;
+    }
+    .credential_container{
+        margin-bottom: 15px;
+    }
+    input[type="text"],
+    input[type="password"]{
+        font-size: 1.25rem;
+    }   
+    .LogIn_SignUp_Buttons{
+        padding: 10px;
+
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+    #Forgot_Password,
+    #Activate {
+    font-size: 1rem;
+}
+}
