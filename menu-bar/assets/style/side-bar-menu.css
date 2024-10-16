@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    font-family: 'Poppins', 'sans-serif';
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #D9D9D9;
+    display: flex;
+}
+
+
+/* Sidebar*/
+.sidebar {
+    position: fixed;
+    margin-top: 0;
+    margin-left: 0;
+    height: 100%;
+    width: 250px;
+    padding: 10px 14px;
+    background: #FFFFFF;
+    transition: width 0.3s ease;
+}
+
+.sidebar .menu-bar-button {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.menu-bar-button img {
+    width: 35px;
+    height: 35px;
+}
+
+/* Closing Sidebar */
+.sidebar.close {
+    width: 40px;
+}
+
+.sidebar.close .side-bar-options-paragraph {
+    display: none; 
+}
+
+.sidebar.close .profile-bar .profile-bar-welcome {
+    display: none;
+}
+
+.sidebar.close .side-bar-buttons {
+    padding-top: 3rem;
+}
+
+.sidebar.close .side-bar-options-items{
+    width: 25px;
+}
+
+/* Opening Sidebar */
+.sidebar.open{
+    width: 300px;
+}
+
+.sidebar.open .side-bar-options-paragraph {
+    display: block;
+}
+
+.sidebar.open .profile-bar {
+    display: flex;
+}
+
+.sidebar.open .side-bar-buttons{
+    padding-top: 0rem;
+}
+
+
+/* Profile Bar */
+.profile-bar {
+    display: flex;
+    column-gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-left: 9rem;
+    align-items: center;
+}
+
+.profile-bar-welcome {
+    display: flex;
+    align-items: center;
+}
+
+.profile-bar-welcome img {
+    height: 45px;
+    width: 45px;
+}
+
+.profile-welcome{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    font-family: 'Inter';
+    color: #4E4E4E;
+    width: 352px;
+}
+
+.profile-welcome p {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.profile-welcome h2 {
+    font-size: 20px;
+    font-weight: 500;
+    font-style: italic
+}
+
+.profile-welcome p,
+.profile-welcome h2 {
+    line-height: 1.1;
+    padding-left: 5px;
+}
+
+
+/* Side Bar Buttons*/
+
+.side-bar-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: max-content;
+}
+
+.side-bar-options-items {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-style: italic;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-weight: 500;
+    height: 2.5rem;
+    width: 200px;
+    padding: 0 10px;
+    gap: 1rem;
+
+}
+
+.side-bar-options-items img {
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    padding-right: 10px;
+}
+
+.top-side-buttons a, .lower-side-buttons a {
+    color: #7C7C7C;
+    text-decoration: none;
+}
+
+.lower-side-buttons {
+    display: flex;
+    
+}
+
+/* Apply background color on hover */
+.side-bar-options-items:hover {
+    color: #8B0505;
+    background-color: rgba(139, 5, 5, 0.3);
+    border-radius: 10px; 
+}
+
+/* Ensure that the text color and image do not change on hover */
+.side-bar-options-items a, 
+.side-bar-options-items img {
+    color: inherit;
+}
+
+
+/* Nav-Bar */
+
+.nav-bar {
+    width: 100%;
+    height: 50px;
+    background: #8b0505;
+    transition: margin-left 0.3s ease, width 0.3s ease;
+    margin-left: 275px;
+}
+
+.nav-bar-logo-name {
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-right: 1rem;
+    font-family: "Poppins";
+    font-size: large;
+    font-weight: 800;
+    color: gold;
+}
+
+.nav-bar img {
+    height: 45px;
+    width: 45px;
+}
+
+.nav-bar-logo-name h2, .nav-bar-logo-name img {
+    padding-left: 1rem;
+}
+
+.sidebar.close ~ .nav-bar {
+    margin-left: 65px;
+    width: calc(100% - 50px); 
+}
